@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+font-family: 'Montserrat', sans-serif; Weights: 500, 700
+font-family: 'Fraunces', serif; Weights: 700
+Font size (paragraph): 14px
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+body {
+    background: hsl(30, 38%, 92%);
+}
+
+p {
+    font-size: 0.875rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.product-card {
+    background: hsl(0, 0%, 100%);
+
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+
+.product-card__img img {
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+}
+
+.product-card__details {
+    padding: 1em;
+}
+
+.product-card__details header p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+.product-card__details header h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(212, 21%, 14%);
+}
+
+.product-card__details section p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: hsl(228, 12%, 48%)
+}
+
+.product-card__price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+
+.product-card__price p:nth-child(1) {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+}
+
+.product-card__price p:nth-child(2) {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    /* font-size: 2rem; */
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.product-card__cta {
+    width: 100%;
+}
+
+.product-card__cta a {
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+@media (max-width:1440px) {
+    .desktop-img {
+        display: none;
+    }
+}
